@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0e17;  /* Deep navy base */
+  --foreground: #e0e7ff;  /* Soft blue-white text */
+  --primary: #2563eb;     /* Rich royal blue (Tailwind blue-600) */
+  --primary-hover: #1d4ed8; /* Deep cobalt (Tailwind blue-700) */
+  --primary-shiny: #3b82f6; /* Vibrant azure (Tailwind blue-500) */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
+
+/* Reset des inputs */
+input,
+textarea,
+select {
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgba(52, 33, 224, 0.1);
+  color: var(--foreground);
+  border: 1px solid var(--primary);
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 1px solid var(--primary);
+  border-color: var(--primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(148 163 184);
+  opacity: 0.7;
+}
+
+/* Styles pour la navigation */
+.nav a.active .nav-indicator {
+  width: 4rem;
+  background-color: var(--foreground);
+}
+
+.nav a.active .nav-text {
+  color: var(--foreground);
+}
+
+.nav a {
+  transition: all 0.3s ease;
+}
+
+.nav a:hover .nav-indicator {
+  width: 4rem;
+  background-color: var(--foreground);
+}
+
+.nav a:hover .nav-text {
+  color: var(--foreground);
+}
+
+/* Styles pour les icônes sociales */
+.social-icon {
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add shiny animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shiny-element {
+  background: linear-gradient(90deg, #0a0e17, #1e40af, #3b82f6, #1e40af, #0a0e17);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
