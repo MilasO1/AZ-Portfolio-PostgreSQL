@@ -1,5 +1,6 @@
+// src/app/api/projects/[id]/route.ts
 import { NextResponse } from 'next/server';
-import { getProjectById } from '@/lib/db';
+import { getProjectById } from '@/lib/postgres-db';
 
 export async function GET(
     request: Request,
@@ -14,7 +15,7 @@ export async function GET(
             );
         }
 
-        const project = getProjectById(id);
+        const project = await getProjectById(id);
         if (!project) {
             return NextResponse.json(
                 { error: 'Project not found' },

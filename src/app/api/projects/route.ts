@@ -1,12 +1,13 @@
+// src/app/api/projects/route.ts
 import { NextResponse } from 'next/server';
-import { getAllProjects } from '@/lib/db';
+import { getAllProjects } from '@/lib/postgres-db';
 
 export const dynamic = 'force-dynamic'; // Important for Next.js API routes
 
 export async function GET() {
     try {
         console.log("Fetching projects...");
-        const projects = getAllProjects();
+        const projects = await getAllProjects();
         console.log(`Found ${projects.length} projects`);
         return NextResponse.json(projects);
     } catch (error) {
