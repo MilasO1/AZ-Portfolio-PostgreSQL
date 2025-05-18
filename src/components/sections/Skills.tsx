@@ -51,6 +51,7 @@ export default function Skills() {
         { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
         { name: "MySQL", icon: <SiMysql className="text-orange-500" /> },
         { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-500" /> },
         {
           name: "Tailwind CSS",
           icon: <SiTailwindcss className="text-cyan-400" />,
