@@ -25,11 +25,11 @@ async function seedProjects() {
       );
     `;
     
-    console.log(`✅ Projects table created successfully`);
+    console.log(` Projects table created successfully`);
     
     // Clear existing data
     await sql`DELETE FROM projects`;
-    console.log(`🧹 Cleared existing projects data`);
+    console.log(` Cleared existing projects data`);
     
     // Insert sample projects
     const projects = [
