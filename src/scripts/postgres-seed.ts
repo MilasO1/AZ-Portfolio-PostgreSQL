@@ -80,10 +80,7 @@ async function main() {
   } catch (error) {
     console.error('Failed to seed the database:', error);
     process.exit(1);
-  } finally {
-    // Note: No need to close the connection as @vercel/postgres manages this
-    process.exit(0);
-  }
+  } 
 }
 
 main();
