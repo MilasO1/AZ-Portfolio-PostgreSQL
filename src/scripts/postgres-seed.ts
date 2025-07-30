@@ -47,7 +47,19 @@ async function seedProjects() {
         image: "/images/chillstreamss.png",
         link: "https://github.com/MilasO1/ChillStreams.git"
       },
-      // Add your other projects here as needed
+      {
+        title: "Kode Kaisen",
+        description: "Plateforme de coding competition avec des défis de programmation et un système de classement.",
+        timeline: "Juillet 2025",
+        stack: ["Next.js", "Typescript", "TailwindCSS"],
+        features: [
+          "Batailles de code : Défis 1v1 en temps réel et chronométrés",
+          "Miroir de code : Visualisation des frappes adverses en direct",
+          "Jugement intégré : Exécution du code via l’API Judge0 avec cas de test"
+        ],
+        image: "/images/kodekaisen.png",
+        link: "https://github.com/MilasO1/Kode-Kaisen.git"
+      },
     ];
     
     // Insert projects one by one
