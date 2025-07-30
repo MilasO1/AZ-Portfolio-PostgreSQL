@@ -49,7 +49,7 @@ async function seedProjects() {
       },
       {
         title: "Kode Kaisen",
-        description: "Plateforme de coding competition avec des défis de programmation et un système de classement.",
+        description: "Plateforme de coding competitif, avec des défis de programmation et un système de classement.",
         timeline: "Juillet 2025",
         stack: ["Next.js", "Typescript", "TailwindCSS"],
         features: [
